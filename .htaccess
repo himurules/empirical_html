@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !\.(?:css|js|jpg|jpeg|png|gif|woff2|woff|ttf|svg|ico)$ [NC]
+RewriteRule ^([^.]+)$ $1.html [NC,L]
