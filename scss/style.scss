@@ -29,7 +29,23 @@ $primary: #a5d26b;
 html {
 	// overflow-x: hidden;
 }
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	background: white;
+}
+
+header.scrolled {
+	background: white;
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
 body {
+	padding-top: 156px; /* height of header */
 	font-family: $font-primary;
 	background: $white;
 	font-size: 16px;
@@ -2292,4 +2308,15 @@ textarea.form-control {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px;
   }
+}
+.shaking {
+	animation: tilt-shaking 0.20s infinite;
+}
+
+@keyframes tilt-shaking {
+	0% { transform: rotate(0deg); }
+	25% { transform: rotate(10deg); }
+	50% { transform: rotate(0deg); }
+	75% { transform: rotate(-10deg); }
+	100% { transform: rotate(0deg); }
 }

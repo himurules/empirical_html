@@ -8,12 +8,10 @@ COPY . /var/www/html/
 
 # change owber ship to apache user
 RUN chown -R www-data:www-data /var/www/html
+RUN chmod -R 755 /var/www/html
 
 # Enable mod_rewrite
 RUN a2enmod rewrite
-
-# Set the working directory
-WORKDIR /var/www/html
 
 # Expose port 80
 EXPOSE 80
