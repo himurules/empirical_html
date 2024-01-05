@@ -95,6 +95,10 @@
                                     <h3 class="mb-4">Contact Us</h3>
                                     <div id="form-message-warning" class="mb-4"></div>
                                     <div id="form-message-success" class="mb-4">
+
+                                    </div>
+                                    <!--
+                                    <div id="form-message-success" class="mb-4">
                                         Please feel free to contact us for any inquiries regarding house construction or
                                         remodeling. We offer a wide range of services including new build homes, house
                                         extensions, house renovations, property development, landscaping, and commercial
@@ -106,7 +110,7 @@
                                         high-quality services and ensuring your project is completed to your satisfaction.
                                         Contact us today to bring your vision to life.
                                     </div>
-                                    <!--
+                                    -->
                                     <form method="POST" id="contactForm" name="contactForm" class="contactForm">
                                         <div class="row">
                                             <div class="col-md-6">
@@ -145,7 +149,6 @@
                                             </div>
                                         </div>
                                     </form>
-                                    -->
                                 </div>
                             </div>
                             <div class="col-md-5 d-flex align-items-stretch">
@@ -295,6 +298,7 @@
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
 <script src="js/scrollax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDW--0pnIrGT905jh0MsS6orgJ-7Thc-tk&sensor=false"></script>
 <script src="js/main.js"></script>
 <script>
     const element = document.querySelector('.call-link');
@@ -317,7 +321,7 @@
     });
 
     function initMap() {
-        var map = new google.maps.Map(document.getElementById("map"), {
+        let map = new google.maps.Map(document.getElementById("map"), {
             center: {lat: -33.8779, lng: 151.1036},
             zoom: 12,
         });
